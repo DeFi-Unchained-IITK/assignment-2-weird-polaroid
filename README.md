@@ -60,6 +60,11 @@ The details contained here include such aspects as the name, authorship and stoc
 When users want to return a borrowed book, they can use the returnBook function. It validates the book ID, checks if the book is currently borrowed (not available), and verifies if the user is the one who borrowed the book. If all conditions are met, it marks the book as available and removes its ID from the user's borrowed_books list.
 To support the returnBook function, I implemented two internal helper functions: isBorrowedBy and removeBookFromBorrowedList. The isBorrowedBy function checks if a given book ID is present in the user's borrowed_books list, and the removeBookFromBorrowedList function removes a book ID from that list.
 
+![Screenshot (43)](https://github.com/DeFi-Unchained-IITK/assignment-2-weird-polaroid/assets/169828145/5bc058c4-e0a7-4514-93a9-701e3f761aec)
+![Screenshot (44)](https://github.com/DeFi-Unchained-IITK/assignment-2-weird-polaroid/assets/169828145/a42f414d-b6fd-4786-907c-090ff2f44028)
+![Screenshot (45)](https://github.com/DeFi-Unchained-IITK/assignment-2-weird-polaroid/assets/169828145/93c71d66-09ec-4a58-a946-b56283052583)
+
+
 You have to create one folder named "FirstName_Roll". In that folder, you have to add three files, one for each question. You can code in Remix IDE and download the file. Also, ensure to update the readme file, the unupadated readme files will not be considered valid. The readme file should contain the description of the code of each question and the screenshots of the function's output deployed in Remix IDE.
 
 

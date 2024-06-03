@@ -45,6 +45,14 @@ Write the following functions :
 
 Write a modifier to help check functions if the input book id is valid or not.
 
+Explaining the code- To easily access, the books mapping stores all the books that are available in the library, with each book’s ID serving as a key. The Ethereum address of the user is used to map which borrowed books belong to him.
+In order to assign unique IDs automatically to every new book I introduced nextID state variable that is set equal to 1 in the constructor.
+The function addBook allows users to add new books by providing a title and author for this book. It then creates a new instance of Book, keeps it in the books mapping together with nextID at present, sets its availability as true and increases nextID for subsequent book.
+Borrowers can use borrowBook function to borrow available books. Whether or not both requirements are met will depend on if it has a valid book ID and whether it is free. Thus, if all these conditions are satisfied, then such publication will be marked as “not available” and its identifier added into list of those borrowed_books belonging to this user.
+The details contained here include such aspects as the name, authorship and stock status of any given entry based on its identification number once looked up using getBookDetails.
+When users want to return a borrowed book, they can use the returnBook function. It validates the book ID, checks if the book is currently borrowed (not available), and verifies if the user is the one who borrowed the book. If all conditions are met, it marks the book as available and removes its ID from the user's borrowed_books list.
+To support the returnBook function, I implemented two internal helper functions: isBorrowedBy and removeBookFromBorrowedList. The isBorrowedBy function checks if a given book ID is present in the user's borrowed_books list, and the removeBookFromBorrowedList function removes a book ID from that list.
+
 You have to create one folder named "FirstName_Roll". In that folder, you have to add three files, one for each question. You can code in Remix IDE and download the file. Also, ensure to update the readme file, the unupadated readme files will not be considered valid. The readme file should contain the description of the code of each question and the screenshots of the function's output deployed in Remix IDE.
 
 

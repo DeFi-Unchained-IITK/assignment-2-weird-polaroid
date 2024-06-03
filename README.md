@@ -9,6 +9,8 @@ Your task is to create a smart contract "PrimeOwner". You have to first declare 
 
 Lastly, emit an event whenever the “owner” is changed.
 
+Explaining the code- The  PrimeOwner contract is made to change the contract owner by making a call to the changeOwnerIfPrime function with an input of prime number. The function first checks if the input number is greater than zero, then it determines whether if it is prime by calling helper function isPrime. In order to check primality, I've made isPrime function which employs an algorithm that covers such base cases as checking divisibility by 2 and iterating through all odd numbers from 3 up to square root of the number. When the input number turns out to be prime, the changeOwnerIfPrime function updates state variable owner with caller address and emits OwnerChanged event. If the input is less than 1 the function call is simply reverted. I've used Newton's method in calculating integral square roots to optimize the prime checking process.
+
 ## Question 2 :
 
 Your task is to create a smart contract “EmployeeRegistree”. You have to define a struct “Employee” with properties : **uint ID, string name, string position, uint salary**.

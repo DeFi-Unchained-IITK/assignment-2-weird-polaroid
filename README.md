@@ -24,6 +24,14 @@ Write four functions :
 Revert back the function calls whenever the id doesn’t exist (in case of last 3 functions). \
 Emit separate events for the functions that adds or updates or deletes an employee. The event should contain all details of employee. In case of deletion, emit the details of the employee deleted.
 
+Explaining the code-The first thing I did was define a struct, called Employee, that would contain key details such as ID, name, position and salary of employees. Then I created an employees mapping to store examples of the Employee struct in which the key is employee’s ID for easier retrieval, updating and deletion.
+In order to find out the next available ID for new employees, I started a state variable named nextID in the contract constructor with value 1
+Among others, three events were also declared: EmployeeAdded, EmployeeUpdated and EmployeeDeleted. These will be emitted whenever an employee is added, updated or deleted respectively in order to allow interested external parties to monitor and respond accordingly.
+The addEmployee function takes name, position and salary as input parameters. It creates a new instance of Employee struct using these details and current nextID as its id; it saves it within the employees mapping; emits the event “EmployeeAdded”;and so on.
+In updateEmployee function I am accepting ID ,name ,position and salary .It checks whether employee exists then it updates details and emit “employeeupdated” event. If not found revert transaction.
+The getEmployeeDetails function retrieves the name, position, and salary of an employee based on their ID. It returns these details if the employee is found, otherwise, it reverts.
+The deleteEmployee function removes an employee from the mapping based on their ID. It first emits the EmployeeDeleted event with the employee's details, then deletes the employee from the mapping. If the employee is not found, it reverts.
+
 ## Question 3 :
 
 Your task is to create a smart contract “Library”. First, define a struct “**Book**” with properties : **uint ID, string name, string author, bool isAvailable**.\

@@ -11,7 +11,7 @@ Lastly, emit an event whenever the “owner” is changed.
 
 Explaining the code- The  PrimeOwner contract is made to change the contract owner by making a call to the changeOwnerIfPrime function with an input of prime number. The function first checks if the input number is greater than zero, then it determines whether if it is prime by calling helper function isPrime. In order to check primality, I've made isPrime function which employs an algorithm that covers such base cases as checking divisibility by 2 and iterating through all odd numbers from 3 up to square root of the number. When the input number turns out to be prime, the changeOwnerIfPrime function updates state variable owner with caller address and emits OwnerChanged event. If the input is less than 1 the function call is simply reverted. I've used Newton's method in calculating integral square roots to optimize the prime checking process.
 ![Screenshot (38)](https://github.com/DeFi-Unchained-IITK/assignment-2-weird-polaroid/assets/169828145/d04170bb-1ed6-44be-9731-5ab6bb6745d6)
-
+![Screenshot (39)](https://github.com/DeFi-Unchained-IITK/assignment-2-weird-polaroid/assets/169828145/7dd6b00e-1de5-440f-8ae1-8031603a2ab1)
 
 ## Question 2 :
 
@@ -33,6 +33,11 @@ The addEmployee function takes name, position and salary as input parameters. It
 In updateEmployee function I am accepting ID ,name ,position and salary .It checks whether employee exists then it updates details and emit “employeeupdated” event. If not found revert transaction.
 The getEmployeeDetails function retrieves the name, position, and salary of an employee based on their ID. It returns these details if the employee is found, otherwise, it reverts.
 The deleteEmployee function removes an employee from the mapping based on their ID. It first emits the EmployeeDeleted event with the employee's details, then deletes the employee from the mapping. If the employee is not found, it reverts.
+
+![Screenshot (40)](https://github.com/DeFi-Unchained-IITK/assignment-2-weird-polaroid/assets/169828145/a64185d5-580b-4a08-beca-7ae9699235ba)
+![Screenshot (41)](https://github.com/DeFi-Unchained-IITK/assignment-2-weird-polaroid/assets/169828145/303236f5-e4ff-4a3c-915c-02bedb2d10e5)
+![Screenshot (42)](https://github.com/DeFi-Unchained-IITK/assignment-2-weird-polaroid/assets/169828145/b3264ede-112e-4028-b644-72cfe2249d69)
+
 
 ## Question 3 :
 
